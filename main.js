@@ -21,6 +21,13 @@ var ball = {
     dy:3
 }
 
+game_status=""
+
+function gameStatus(){
+game_status="start";
+document.getElementById("status").innerHTML - "Game Is Loaded";
+}
+
 function preload() {
   ball_touch_paddel = loadSound("ball_touch_paddel.wav");
   missed = loadSound("missed.wav");
@@ -53,6 +60,19 @@ function draw(){
  fill("black");
  stroke("black");
  rect(0,0,20,700);
+
+ poseNet.on(poses, gotPoses)
+
+ function gotPoses(error, results)
+ if (length.results < 0) {
+  
+ }
+
+ if(game_status == "start"){
+
+ }
+ 
+ fub
  
    //funtion paddleInCanvas call 
    paddleInCanvas();
